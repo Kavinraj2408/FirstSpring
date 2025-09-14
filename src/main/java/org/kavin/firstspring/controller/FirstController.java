@@ -16,4 +16,9 @@ public class FirstController {
     public HelloResponse hello(@RequestBody String name) {
         return new  HelloResponse("Hello " + name +"!");
     }
+
+    @GetMapping("/hello/{name}")
+    public HelloResponse helloParam(@PathVariable String name) {
+        return new HelloResponse("Hello " + name +"!");
+    }
 }
